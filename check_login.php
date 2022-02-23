@@ -30,7 +30,6 @@
     $cursor = mysqli_stmt_get_result($statement);
     $result = mysqli_fetch_all ($cursor);
 
-
     // $sql = "SELECT * FROM users WHERE login='$user' AND Pwdhash='$hpwd';";
     // $query = mysqli_query($conn, $sql);
     // $result = mysqli_fetch_all ($query);
