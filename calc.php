@@ -47,7 +47,14 @@
         function minux(){
             x = parseInt(document.getElementById("txtX").value);
             y = parseInt(document.getElementById("txtY").value);
-            z = x - y;
+            // z = x - y;
+            
+            url = "api/minus.php?x=" + x + "&y=" + y;
+            xhr = new XMLHttpRequest();
+            xhr.open("GET", url, false);
+            xhr.send();
+            z = xhr.responseText;
+
             document.getElementById("txtZ").value = z;
         }
     </script>
@@ -64,6 +71,8 @@
         <button onclick="plus();">+</button>
         <button onclick="minux();">-</button> <br/>
         <input id="txtZ">
+        <br/>
+        <a href="billing.php">Счёт</a> </br>
     </div>
     
 </body>
