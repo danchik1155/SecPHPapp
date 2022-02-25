@@ -46,7 +46,7 @@
 <body>
     <a href="index.html">Домой</a> </br>
     <h1> Form for registration </h1>
-    <form method="post" action="API/registration.php">
+    <form method="post" action="registration.php">
         <input name="user"/> <br/>
         Введите пароль <br/>
         <input name="pwd" onkeyup="validate();" type="password" id="pass1"/> <br/>
