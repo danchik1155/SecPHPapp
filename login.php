@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION["user"])){
+        echo '<meta http-equiv="refresh" content="2; URL=login.php">';
+        die("Вы уже авторизованы");
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +18,12 @@
 </head>
 <body>
     <h1> Login, please! </h1>
-    <form method="post" action="check_login.php">
+    <form method="post" action="API/check_login.php">
         <input name="user"/> <br/>
         <input name="pwd" type="password"/> <br/>
         <button> Submit </button>
     </form>
-
+    <a href="register.php">Зарегистрироваться</a> </br>
 </body>
 </html>
 
