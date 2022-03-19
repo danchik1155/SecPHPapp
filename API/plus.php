@@ -6,7 +6,8 @@ $y = $_REQUEST["y"];
 include("../../../params/billing.php");
 $conn = mysqli_connect($db_server, $db_user, $db_pwd, "billing");
 $userid = $_SESSION["user"];
-$sql = "INSERT INTO calcs (Number1, Number2, Operation, UserID) VALUES ($x, $y, 'plus', '$userid');";
+$today = date('Y-m-d H:i:s');
+$sql = "INSERT INTO calcs (Number1, Number2, Operation, UserID, Timestamp) VALUES ($x, $y, 'plus', '$userid', '$today');";
 mysqli_query($conn, $sql);
 
 mysqli_close($conn);
